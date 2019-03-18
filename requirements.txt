@@ -1,0 +1,5 @@
+Django==2.1.7
+nltk==3.4
+pyspellchecker==0.3.1
+beautifulsoup4==4.7.1
+spellchecker==0.4
