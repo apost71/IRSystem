@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <form method="get" novalidate class="form-inline">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-success">Search</button>
+  </form>
+  {% if documents %}
+  {% if query %}
+  <p1 style="margin-top: 20px"><strong>Showing results for:</strong> {{ query }}</p1>
+  {% endif %}
+  <ul class="list-group list-group-flush" style="padding-top: 50px">
+    {% for document in documents %}
+      <li class="list-group-item">
+        <a href="{{ document.url }}">{{ document.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endblock %}
