@@ -16,4 +16,4 @@ Finally, move to the `search` directory and run:
 
 `python manage.py runserver`
 
-Now you should be able to see the search engine running at 127.0.0.1:8000/search.
+Now you should be able to see the search engine running at `127.0.0.1:8000/search`.
